@@ -49,6 +49,7 @@
         <module>hystrix-dashboard</module>
         <module>zipkin-server</module>
         <module>admin-server</module>
+        <module>user-service</module>
     </modules>
 
     <dependencyManagement>

@@ -17,4 +17,9 @@ public class HystrixController {
     public String ticketFallback(){
         return "Ticket Service is not available.";
     }
+
+    @GetMapping("/user")
+    public String userFallback(){
+        return "User Service is not available.";
+    }
 }
