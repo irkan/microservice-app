@@ -11,7 +11,7 @@ public class NotificationDistributionService {
     @StreamListener(Sink.INPUT)
     public void onNotification(TicketNotification ticketNotification){
         System.out.println("———————————————————————————————————————————");
-        System.out.println("Notification Alindi Kullanicilara gönderiliyor.");
+        System.out.println("Notification Alindi Istifadecilere gönderilir.");
         System.out.println("Notification -> " + ticketNotification.toString());
     }
 }
