@@ -14,8 +14,8 @@ spring:
     hibernate:
       ddl-auto: update
   rabbitmq:
-    username: ${MYSQL_USERNAME:haydikodlayalim}
-    password: ${MYSQL_PASSWORD:haydikodlayalim}
+    username: ${MYSQL_USERNAME:kapitalbank}
+    password: ${MYSQL_PASSWORD:kapitalbank}
   cloud:
     stream:
       bindings:

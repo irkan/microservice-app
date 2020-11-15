@@ -1,7 +1,7 @@
 version: '3.1'
 
 networks:
-  haydikodlayalim:
+  kapitalbank:
 
 services:
   # DB and Queue -----------------------
@@ -9,7 +9,7 @@ services:
     image: cassandra
     container_name: hk-cassandra-server
     networks:
-      - haydikodlayalim
+      - kapitalbank
     ports:
       - '9042:9042'
 
@@ -18,7 +18,7 @@ services:
     container_name: hk-mysql-server
     restart: always
     networks:
-      - haydikodlayalim
+      - kapitalbank
     environment:
       MYSQL_ROOT_PASSWORD: microservice-app
     ports:
@@ -28,7 +28,7 @@ services:
     image: elasticsearch:6.8.5
     container_name: hk-elasticsearch
     networks:
-      - haydikodlayalim
+      - kapitalbank
     ports:
       - 9200:9200
       - 9300:9300
@@ -39,13 +39,13 @@ services:
     image: rabbitmq:3-management
     container_name: hk-msrabbitmq
     networks:
-      - haydikodlayalim
+      - kapitalbank
     ports:
       - '5672:5672'
       - '15672:15672'
     environment:
-      - RABBITMQ_DEFAULT_USER=haydikodlayalim
-      - RABBITMQ_DEFAULT_PASS=haydikodlayalim
+      - RABBITMQ_DEFAULT_USER=kapitalbank
+      - RABBITMQ_DEFAULT_PASS=kapitalbank
 
   # Local Services -----------------------
 
@@ -54,7 +54,7 @@ services:
     container_name: hk-account-service
     restart: always
     networks:
-      - haydikodlayalim
+      - kapitalbank
     environment:
       CONFIG_SERVER_URL: http://hk-config-server:8888
       CASSANDRA_SERVER_HOST: hk-cassandra-server
@@ -66,7 +66,7 @@ services:
     container_name: hk-ticket-service
     restart: always
     networks:
-      - haydikodlayalim
+      - kapitalbank
     environment:
       CONFIG_SERVER_URL: http://hk-config-server:8888
     ports:
@@ -77,7 +77,7 @@ services:
     container_name: hk-notification-service
     restart: always
     networks:
-      - haydikodlayalim
+      - kapitalbank
     environment:
       CONFIG_SERVER_URL: http://hk-config-server:8888
     ports:
@@ -89,7 +89,7 @@ services:
     container_name: hk-config-server
     restart: always
     networks:
-      - haydikodlayalim
+      - kapitalbank
     environment:
       CONFIG_SERVER_URL: http://config-server:8888
       SERVER_PORT: 8888
@@ -101,7 +101,7 @@ services:
     container_name: hk-eureka-server
     restart: always
     networks:
-      - haydikodlayalim
+      - kapitalbank
     environment:
       CONFIG_SERVER_URL: http://hk-config-server:8888
       SERVER_PORT: 8887
@@ -113,7 +113,7 @@ services:
     container_name: hk-admin-server
     restart: always
     networks:
-      - haydikodlayalim
+      - kapitalbank
     environment:
       EUREKA_SERVICE_URL: http://hk-eureka-server:8888
       SERVER_PORT: 8886
@@ -125,7 +125,7 @@ services:
     container_name: hk-gateway-server
     restart: always
     networks:
-      - haydikodlayalim
+      - kapitalbank
     environment:
       EUREKA_SERVICE_URL: http://hk-eureka-server:8888
       SERVER_PORT: 8885
@@ -137,7 +137,7 @@ services:
     container_name: hk-hystrix-dashboard
     restart: always
     networks:
-      - haydikodlayalim
+      - kapitalbank
     environment:
       EUREKA_SERVICE_URL: http://hk-eureka-server:8888
       SERVER_PORT: 8884
@@ -149,7 +149,7 @@ services:
     container_name: hk-zipkin-server
     restart: always
     networks:
-      - haydikodlayalim
+      - kapitalbank
     environment:
       EUREKA_SERVICE_URL: http://hk-eureka-server:8888
       SERVER_PORT: 8883
