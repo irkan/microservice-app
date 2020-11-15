@@ -54,6 +54,7 @@
         <module>user-service</module>
         <module>customer-service</module>
         <module>gateway-server-zuul</module>
+        <module>oauth2-server</module>
     </modules>
 
     <dependencyManagement>

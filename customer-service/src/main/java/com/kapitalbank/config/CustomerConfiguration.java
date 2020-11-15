@@ -1,4 +1,3 @@
-/*
 package com.kapitalbank.config;
 
 import org.springframework.context.annotation.Bean;
@@ -9,10 +8,9 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan("com.kapitalbank")
 public class CustomerConfiguration {
 
-	@Bean
+	/*@Bean
 	public AlwaysSampler defaultSampler() {
 	  return new AlwaysSampler();
-	}
+	}*/
 	
 }
-*/

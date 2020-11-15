@@ -69,7 +69,7 @@ public class CustomerApi {
         return customer;
     }
 
-    @RequestMapping(method = RequestMethod.DELETE, value = "/{id}")
+    @DeleteMapping("/{id}")
     public boolean deleteCustomer(@PathVariable Integer id) {
         log.info("Customer.deleteCustomer()");
         try {
