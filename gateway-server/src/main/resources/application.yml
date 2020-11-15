@@ -32,15 +32,16 @@ spring:
                 fallbackUri: forward:/fb/ticket
 
         - id: user-service
-            uri: lb://USER-SERVICE
-            predicates:
-              - Path=/user/**
-            filters:
-              - RewritePath=/(?<segment>.*), /$\{segment}
-              - name: Hystrix
-                args:
-                  name: user-service
-                  fallbackUri: forward:/fb/user
+          uri: lb://USER-SERVICE
+          predicates:
+            - Path=/user/**
+          filters:
+            - RewritePath=/(?<segment>.*), /$\{segment}
+            - name: Hystrix
+              args:
+                name: ticket-service
+                fallbackUri: forward:/fb/user
+
 
 eureka:
   client:

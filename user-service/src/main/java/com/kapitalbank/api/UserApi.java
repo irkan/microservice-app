@@ -2,6 +2,7 @@ package com.kapitalbank.api;
 
 import com.kapitalbank.exception.AccountNotFoundException;
 import com.kapitalbank.model.Account;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,6 +12,7 @@ import java.util.stream.Collectors;
 
 @RestController
 @Slf4j
+@RequestMapping("user")
 public class UserApi {
 
     private List<Account> accounts;

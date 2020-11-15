@@ -4,11 +4,11 @@
  http://localhost:8501/account
 
 {
-	"username" : "temelt",
-    "name" : "Taner",
-    "surname" : "TEMEL",
-    "email" : "haydi.kodlayalim@gmail.com",
-    "birthDate" : "1999-01-01"
+	"username" : "irkan",
+    "name" : "Irkan",
+    "surname" : "AHMADOV",
+    "email" : "irkan.ahmadov@gmail.com",
+    "birthDate" : "1989-01-01"
 }
 ```
 
@@ -19,8 +19,8 @@
 
 {
 	"description" : "Test Ticket 1",
-    "notes" : "Test Ticket 1 - Docker Compose Hatasi",
-    "assignee" : "temelt",
+    "notes" : "Test Ticket 1 - Docker Compose Xetasi",
+    "assignee" : "irkan",
     "priorityType" : "URGENT",
     "ticketStatus" : "OPEN",
     "ticketDate" : "1999-01-01"

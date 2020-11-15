@@ -21,9 +21,9 @@
 
     <developers>
         <developer>
-            <id>temelt</id>
-            <name>Taner TEMEL</name>
-            <email>taner.temel@outlook.com</email>
+            <id>irkan</id>
+            <name>Irkan Ahmadov</name>
+            <email>irkan.ehmedov@gmail.com</email>
             <roles>
                 <role>
                     Sr. Software Engineer
@@ -35,6 +35,8 @@
     <properties>
         <java.version>11</java.version>
         <spring.cloud.version>Hoxton.RELEASE</spring.cloud.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
 
     <modules>
@@ -50,6 +52,8 @@
         <module>zipkin-server</module>
         <module>admin-server</module>
         <module>user-service</module>
+        <module>customer-service</module>
+        <module>gateway-server-zuul</module>
     </modules>
 
     <dependencyManagement>
