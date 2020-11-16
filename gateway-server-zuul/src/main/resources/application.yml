@@ -18,6 +18,18 @@ zuul:
     customer:
       path: /customer/**
       serviceId: customer-service
+    resource:
+      sensitiveHeaders:
+      path: /resource/**
+      serviceId: rest-service
+    auth:
+      sensitiveHeaders:
+      #should be same as auth server context path
+      path: /auth/**
+      serviceId: oauth2-server
+      #should be false if server has custom context path
+      strip-prefix: false
+    add-host-header: true
 
 ribbon:
   eureka:
@@ -32,7 +44,11 @@ eureka:
 server:
   port: 8765
 
-logging:
-  level:
-    ROOT: INFO
-    org.springframework.web: DEBUG
+sso:
+  client:
+    accessTokenUri: http://localhost:7070/auth/oauth/token
+    userAuthorizationUri: http://localhost:7070/auth/oauth/authorize
+    clientId: clientIdMock
+    clientSecret: clientSecretMock
+  resource:
+    userInfoUri: http://localhost:7070/resource/rest/me

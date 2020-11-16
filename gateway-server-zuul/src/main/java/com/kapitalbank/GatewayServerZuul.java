@@ -14,17 +14,11 @@ import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 @EnableZuulProxy
-@EnableOAuth2Sso
 @EnableDiscoveryClient
-public class GatewayServer {
+public class GatewayServerZuul {
 
 	public static void main(String[] args) {
-		SpringApplication.run(GatewayServer.class, args);
+		SpringApplication.run(GatewayServerZuul.class, args);
 	}
 
-	@Bean
-	public DataSource dataSource() {
-		return DataSourceBuilder.create().url("jdbc:mysql://192.168.99.100:33306/default?useSSL=false")
-				.username("default").password("default").driverClassName("com.mysql.jdbc.Driver").build();
-	}
 }
