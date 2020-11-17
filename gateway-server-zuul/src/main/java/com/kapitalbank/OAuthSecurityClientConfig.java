@@ -1,3 +1,4 @@
+/*
 package com.kapitalbank;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -76,4 +77,4 @@ public class OAuthSecurityClientConfig extends WebSecurityConfigurerAdapter {
     public ResourceServerProperties ssoResource() {
         return new ResourceServerProperties();
     }
-}
+}*/
