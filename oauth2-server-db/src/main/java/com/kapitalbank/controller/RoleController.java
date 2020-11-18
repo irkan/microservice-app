@@ -1,7 +1,7 @@
 package com.kapitalbank.controller;
 
-import com.example.rest.commons.entity.Role;
-import com.example.rest.commons.repository.RoleRepository;
+import com.kapitalbank.entity.Role;
+import com.kapitalbank.repository.RoleRepository;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;

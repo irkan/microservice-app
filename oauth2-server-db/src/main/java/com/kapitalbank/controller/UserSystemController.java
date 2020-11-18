@@ -1,7 +1,7 @@
 package com.kapitalbank.controller;
 
-import com.example.rest.commons.entity.UserSystem;
-import com.example.rest.commons.service.UserSystemService;
+import com.kapitalbank.entity.UserSystem;
+import com.kapitalbank.service.UserSystemService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;

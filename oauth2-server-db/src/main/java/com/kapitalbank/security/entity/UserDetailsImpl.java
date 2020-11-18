@@ -1,6 +1,6 @@
 package com.kapitalbank.security.entity;
 
-import com.example.rest.commons.entity.UserSystem;
+import com.kapitalbank.entity.UserSystem;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;

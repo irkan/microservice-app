@@ -1,5 +1,8 @@
 package com.kapitalbank.security.service;
 
+import com.kapitalbank.entity.UserSystem;
+import com.kapitalbank.repository.UserSystemRepository;
+import com.kapitalbank.security.entity.UserDetailsImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;

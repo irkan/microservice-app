@@ -56,6 +56,9 @@
         <module>gateway-server-zuul</module>
         <module>oauth2-server</module>
         <module>oauth2-server-db</module>
+        <module>service-common-db</module>
+        <module>gateway-server-zuul-db</module>
+        <module>product-service-db</module>
     </modules>
 
     <dependencyManagement>

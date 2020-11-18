@@ -1,6 +1,6 @@
 package com.kapitalbank.security.config;
 
-import com.example.rest.auth.security.service.UserDetailsServiceImpl;
+import com.kapitalbank.security.service.UserDetailsServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

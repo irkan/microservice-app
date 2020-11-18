@@ -1,9 +1,10 @@
 package com.kapitalbank;
 
-import com.example.rest.commons.entity.Role;
-import com.example.rest.commons.entity.UserSystem;
-import com.example.rest.commons.repository.RoleRepository;
-import com.example.rest.commons.repository.UserSystemRepository;
+
+import com.kapitalbank.entity.Role;
+import com.kapitalbank.entity.UserSystem;
+import com.kapitalbank.repository.RoleRepository;
+import com.kapitalbank.repository.UserSystemRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -19,8 +20,8 @@ import java.util.Collection;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-@EnableJpaRepositories({"com.example.rest.commons.repository"})
-@EntityScan({"com.example.rest.commons.entity"})
+@EnableJpaRepositories({"com.kapitalbank.repository"})
+@EntityScan({"com.kapitalbank.entity"})
 @ComponentScan("com.kapitalbank")
 public class OAuth2ServerDBApplication {
 
