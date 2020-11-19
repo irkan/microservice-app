@@ -17,7 +17,7 @@ import java.util.Optional;
 @SpringBootApplication
 @EnableDiscoveryClient
 @EnableJpaRepositories({"com.kapitalbank.repository"})
-@EntityScan({"com.example.rest.commons.entity"})
+@EntityScan({"com.kapitalbank.entity"})
 @ComponentScan("com.kapitalbank")
 public class RestProductApplication {
 
