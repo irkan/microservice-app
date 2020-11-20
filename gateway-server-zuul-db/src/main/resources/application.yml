@@ -41,7 +41,7 @@ zuul:
       custom-sensitive-headers: true
 
     product:
-      service-id: product
+      service-id: product-service
       path: /product/**
       strip-prefix: false
       custom-sensitive-headers: true

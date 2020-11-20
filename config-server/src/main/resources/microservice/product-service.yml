@@ -1,11 +1,9 @@
 server:
   port: 8512
-  servlet:
-    context-path: /product
-    
+
 spring:
   application:
-    name: product
+    name: product-service
   jpa:
     show-sql: false
     hibernate:
@@ -19,12 +17,11 @@ spring:
     url: jdbc:postgresql://localhost:5432/microservices
     username: postgres
     password: Irk@n19890925
-    
+
 eureka:
-  instance: 
+  instance:
     hostname: localhost
   client:
     serviceUrl:
       defaultZone: http://localhost:8500/eureka
-        
-        
+
